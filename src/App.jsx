@@ -7,7 +7,7 @@ import Servicios from './Servicios';
 import ServicioAdd from './ServicioAdd';
 import Estudiantes from './Estudiantes';
 import EstudianteAdd from './EstudianteAdd';
-import Dashboard from './dashboard';
+import Dashboard from './Dashboard';
 import Home from './Home';
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);

@@ -1,6 +1,5 @@
 .services-section {
     padding: 4rem 0;
-
     text-align: center;
   }
   
@@ -10,8 +9,9 @@
   }
   
   .services-grid {
+    
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
     gap: 2rem;
   }
   
@@ -19,7 +19,7 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
+    padding: 1rem;
     transition: transform 0.3s ease-in-out;
   }
   
@@ -47,27 +47,19 @@
   }
 .hero {
   text-align: center;
-  background-image: url('/img/fondo.jpg'); /* Asegúrate de que esta imagen está optimizada y es de alta calidad */
   background-size: cover;
   background-position: center;
-  padding: 50px 0;
-  padding-left: 500px;
-  width: 100%;
-  margin-top: 30px;
   height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.services-title{
-  margin-left: 500px;
 
-}
 
 .hero h1 {
   font-size: 3rem;
-  color: #333;
+  color: #ff0606;
   margin-bottom: 2rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -82,3 +74,24 @@
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
   }
+  .service-card img{
+    width: 60px;
+    height: auto;
+  }
+
+  .bienvenida {
+    padding: 20px;
+    background-color: #f8f9fa; /* Un color de fondo claro */
+    margin: 20px auto;
+    width: 80%; /* O el ancho que prefieras */
+    border-radius: 10px; /* Para bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Una sombra suave para darle profundidad */
+    text-align: center; /* Centrar el texto si prefieres */
+  }
+  
+  .bienvenida-texto {
+    color: #333; /* Color de texto */
+    font-size: 18px; /* Tamaño del texto */
+    line-height: 1.6; /* Espaciado entre líneas para mejorar la legibilidad */
+  }
+  

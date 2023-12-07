@@ -5,6 +5,9 @@ import Swal from 'sweetalert2';
 import "./Css/dashboard.css";
 
 const EstudianteAdd = () => {
+    const styleWidth = {
+        width: '280%', // Ajusta este valor al ancho deseado
+      };
     const [estudianteData, setEstudianteData] = useState({
         nombreCompleto: '',
         facultad: '',
@@ -49,7 +52,7 @@ const EstudianteAdd = () => {
     };
 
     return (
-        <div className="dashboard">
+        <div className="dashboard" style={styleWidth}>
         <nav>
             <div className="logo-name">
                 <span className="logo_name">DBU</span>

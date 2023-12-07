@@ -7,7 +7,7 @@
 }
 html, body{
   display: grid;
-  height: 100vh;
+
   width: 100%;
   place-items: center;
   background: linear-gradient(to right, #3fb6be 0%, #081c1e 100%);

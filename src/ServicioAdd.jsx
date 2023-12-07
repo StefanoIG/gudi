@@ -2,8 +2,12 @@ import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import "./Css/dashboard.css";
+import "./Css/register.css";
 
 const ServicioAdd = () => {
+    const styleWidth = {
+        width: '250%', // Ajusta este valor al ancho deseado
+      };
     const [servicioData, setServicioData] = useState({
         id: '',
         nombre: '',
@@ -47,7 +51,7 @@ const ServicioAdd = () => {
 
 
     return (
-        <div className="dashboard">
+        <div className="dashboard" style={styleWidth}>
             <nav>
             <div className="logo-name">
                 <span className="logo_name">DBU</span>
@@ -92,8 +96,9 @@ const ServicioAdd = () => {
             <div className="dash-content">
                 <div className="title">
                     <div className="text">Añadir Servicio</div>
+                    </div>
 
-                <div className="user-form">
+                    <div className="user-form">
                     <form id="registroForm" onSubmit={handleSubmit}>
                         <div className="row">
                             {/* Campos del formulario */}
@@ -127,7 +132,7 @@ const ServicioAdd = () => {
                     
                 </div>
 
-            </div>
+           
          </div>
          </section>
         </div>

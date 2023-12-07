@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 import "./Css/dashboard.css";
 
 const Estudiantes = () => {
+    const navigate = useNavigate();
     const [estudiantes, setEstudiantes] = useState([]);
 
     useEffect(() => {
@@ -60,8 +61,8 @@ const Estudiantes = () => {
                         <div className="title">
                             {/* Icono de usuario (puede ser un componente de React o un SVG) */}
                             <span className="text">Modulo Estudiantes</span>
-                            <a href="estudiante-create.html" style={{ textDecoration: "none", marginLeft: "70%" }}>
-                                +
+                            <a style={{ textDecoration: "none", marginLeft: "70%" }} onClick={() => navigate('/estudiante-add')}>
+                            +
                             </a>
                         </div>
 

@@ -474,3 +474,62 @@ nav.close ~ .dashboard .top{
     border-radius: .25rem;
 }
 
+
+/* Estilo general del formulario */
+#registroForm {
+    max-width: 800px; /* Ajusta al ancho que prefieras */
+    margin: auto;
+    padding: 1rem;
+    background: #f5f5f5; /* Color de fondo del formulario */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los grupos de formulario */
+.user-form .form-group {
+    margin-bottom: 1rem; /* Espaciado entre los campos del formulario */
+}
+
+/* Estilo de las etiquetas de los campos de formulario */
+.user-form .form-group label {
+    display: block;
+    margin-bottom: .5rem;
+    color: #333; /* Color del texto */
+}
+
+/* Estilo de los campos de entrada */
+.user-form .form-group .form-control {
+    width: 100%;
+    padding: .5rem;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+/* Estilo para el select */
+.user-form .form-group .form-select {
+    width: 100%;
+    padding: .5rem;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+/* Estilo para los botones */
+.user-form .btn {
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Estilo específico para el botón primario */
+.user-form .btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.user-form .btn-primary:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el ratón por encima */
+}
+
+
