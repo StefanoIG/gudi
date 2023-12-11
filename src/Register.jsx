@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import "./Css/register.css";
 import Swal from 'sweetalert2';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom';
+import toast from "react-hot-toast";
+
 
 import {
   validarEmail,
   validarTelefono,
   validarContrasena,
   verificarContrasenas,
-  alertaRegistroExitoso,
   validarTexto,
   validarCedula
 } from './validaciones';
 
 function RegistroForm() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [nombre, setNombre] = useState('');
   const [apellido, setApellido] = useState('');
@@ -30,6 +32,18 @@ function RegistroForm() {
   const [errorApellido, setErrorApellido] = useState(''); // Nuevo estado para error de apellido
   const [errorCedula, setErrorCedula] = useState('');
 
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer);
+      toast.addEventListener('mouseleave', Swal.resumeTimer);
+    }
+  });
+  
 
   const handleEmailChange = (e) => {
     const nuevoEmail = e.target.value;
@@ -121,8 +135,14 @@ function RegistroForm() {
   
     localStorage.setItem('misDatos', JSON.stringify(datosActuales));
     console.log('Datos actualizados en localStorage:', datosActuales);
-  
-    alertaRegistroExitoso();
+      //registro god
+     Toast.fire({
+      icon: 'success',
+      title: 'Registro exitoso'
+    }).then(() => {
+      navigate('/login');
+    });
+
   
     // Limpiar campos del formulario
     setEmail('');

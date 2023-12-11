@@ -90,14 +90,7 @@ export function alertaIniciandoSesion() {
 }
 
 // Función para mostrar un Toast de éxito y redirigir
-export function alertaRegistroExitoso() {
-  Toast.fire({
-    icon: 'success',
-    title: 'Registro exitoso'
-  }).then(() => {
-    window.location.href = '/login'; // Asegúrate de ajustar la URL según tus rutas
-  });
-}
+
 
 
 export function validarTexto(valor) {

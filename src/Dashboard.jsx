@@ -6,7 +6,7 @@ import './Css/dashboard.css';
 const Dashboard = () => {
     // Define el objeto de estilo en tu componente
 const styleWidth = {
-    width: '250%', // Ajusta este valor al ancho deseado
+    width: '100vw', // Ajusta este valor al ancho deseado
   };
     const [usuariosRecientes, setUsuariosRecientes] = useState([]);
     const [estadisticas, setEstadisticas] = useState({
